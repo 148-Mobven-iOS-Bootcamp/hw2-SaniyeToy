@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DisplayViewController: UIViewController {
+class CharacterDisplayViewController: UIViewController {
     
     
     @IBOutlet weak var characterImageView: UIImageView!
