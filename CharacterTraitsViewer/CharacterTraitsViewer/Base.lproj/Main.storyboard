@@ -75,7 +75,7 @@
         <!--Character Selection View Controller-->
         <scene sceneID="wd0-S6-2Lc">
             <objects>
-                <viewController id="bmz-qk-VhU" customClass="CharacterSelectionViewController" customModule="CharacterTraitsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterSelectionViewController" id="bmz-qk-VhU" customClass="CharacterSelectionViewController" customModule="CharacterTraitsViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lC7-Oi-zgm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

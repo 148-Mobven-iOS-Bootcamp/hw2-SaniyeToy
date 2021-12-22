@@ -8,9 +8,10 @@
 import UIKit
 
 class CharacterSelectionViewController: UIViewController {
+    
+    var selectionDelegate : CharacterSelectionDelegate!
 
     @IBOutlet weak var whichOneLabel: UILabel!
-    
     @IBOutlet weak var rickSelectButton: UIButton!
     @IBOutlet weak var mortySelectButton: UIButton!
     @IBOutlet weak var bethSelectButton: UIButton!
@@ -20,13 +21,17 @@ class CharacterSelectionViewController: UIViewController {
 
     }
     @IBAction func rickSelectButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "rick")!)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func mortySelectButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "morty")!)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func bethSelectButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "beth")!)
+        dismiss(animated: true, completion: nil)
     }
-    
-
 }

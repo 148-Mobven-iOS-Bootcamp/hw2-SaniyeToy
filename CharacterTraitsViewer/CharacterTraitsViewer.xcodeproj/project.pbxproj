@@ -17,6 +17,7 @@
 		226DBC1D277311FA008E1E9B /* CharacterTraitsViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DBC1C277311FA008E1E9B /* CharacterTraitsViewerUITests.swift */; };
 		226DBC1F277311FA008E1E9B /* CharacterTraitsViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DBC1E277311FA008E1E9B /* CharacterTraitsViewerUITestsLaunchTests.swift */; };
 		226DBC2E277323D0008E1E9B /* CharacterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DBC2D277323D0008E1E9B /* CharacterSelectionViewController.swift */; };
+		226DBC3027732D93008E1E9B /* CharacterSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DBC2F27732D93008E1E9B /* CharacterSelectionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		226DBC1C277311FA008E1E9B /* CharacterTraitsViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTraitsViewerUITests.swift; sourceTree = "<group>"; };
 		226DBC1E277311FA008E1E9B /* CharacterTraitsViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTraitsViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		226DBC2D277323D0008E1E9B /* CharacterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionViewController.swift; sourceTree = "<group>"; };
+		226DBC2F27732D93008E1E9B /* CharacterSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				226DBBFD277311F8008E1E9B /* SceneDelegate.swift */,
 				226DBBFF277311F8008E1E9B /* CharacterDisplayViewController.swift */,
 				226DBC2D277323D0008E1E9B /* CharacterSelectionViewController.swift */,
+				226DBC2F27732D93008E1E9B /* CharacterSelectionDelegate.swift */,
 				226DBC01277311F8008E1E9B /* Main.storyboard */,
 				226DBC04277311F9008E1E9B /* Assets.xcassets */,
 				226DBC06277311F9008E1E9B /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				226DBC00277311F8008E1E9B /* CharacterDisplayViewController.swift in Sources */,
 				226DBC2E277323D0008E1E9B /* CharacterSelectionViewController.swift in Sources */,
 				226DBBFC277311F8008E1E9B /* AppDelegate.swift in Sources */,
+				226DBC3027732D93008E1E9B /* CharacterSelectionDelegate.swift in Sources */,
 				226DBBFE277311F8008E1E9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

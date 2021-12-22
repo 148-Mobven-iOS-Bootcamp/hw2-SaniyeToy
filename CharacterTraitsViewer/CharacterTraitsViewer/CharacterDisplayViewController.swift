@@ -20,7 +20,16 @@ class CharacterDisplayViewController: UIViewController {
     }
 
     @IBAction func characterChoiceButtonTapped(_ sender: Any) {
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "CharacterSelectionViewController") as! CharacterSelectionViewController
+        selectionVC.selectionDelegate = self
+        present(selectionVC, animated: true, completion: nil)
+    }
     }
     
-}
 
+extension CharacterDisplayViewController: CharacterSelectionDelegate {
+    func didTapChoice(image: UIImage) {
+        characterImageView.image = image
+    }
+
+}
