@@ -21,16 +21,22 @@ class CharacterSelectionViewController: UIViewController {
 
     }
     @IBAction func rickSelectButtonTapped(_ sender: Any) {
+        let name = Notification.Name(rawValue: rickNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "rick")!)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func mortySelectButtonTapped(_ sender: Any) {
+        let name = Notification.Name(rawValue: mortyNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "morty")!)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func bethSelectButtonTapped(_ sender: Any) {
+        let name = Notification.Name(rawValue: bethNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "beth")!)
         dismiss(animated: true, completion: nil)
     }
