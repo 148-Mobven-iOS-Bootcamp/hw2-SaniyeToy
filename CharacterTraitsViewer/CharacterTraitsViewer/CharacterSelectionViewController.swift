@@ -16,6 +16,8 @@ class CharacterSelectionViewController: UIViewController {
     @IBOutlet weak var mortySelectButton: UIButton!
     @IBOutlet weak var bethSelectButton: UIButton!
     
+    public var completionHandler : ((String?) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,7 @@ class CharacterSelectionViewController: UIViewController {
         let name = Notification.Name(rawValue: rickNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "rick")!)
+        completionHandler!("Male")
         dismiss(animated: true, completion: nil)
     }
     
@@ -31,6 +34,7 @@ class CharacterSelectionViewController: UIViewController {
         let name = Notification.Name(rawValue: mortyNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "morty")!)
+        completionHandler!("Male")
         dismiss(animated: true, completion: nil)
     }
     
@@ -38,6 +42,7 @@ class CharacterSelectionViewController: UIViewController {
         let name = Notification.Name(rawValue: bethNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "beth")!)
+        completionHandler!("Female")
         dismiss(animated: true, completion: nil)
     }
 }

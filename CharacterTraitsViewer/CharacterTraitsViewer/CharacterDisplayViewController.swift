@@ -72,6 +72,9 @@ class CharacterDisplayViewController: UIViewController {
     @IBAction func characterChoiceButtonTapped(_ sender: Any) {
         let selectionVC = storyboard?.instantiateViewController(withIdentifier: "CharacterSelectionViewController") as! CharacterSelectionViewController
         selectionVC.selectionDelegate = self
+        selectionVC.completionHandler = { gender in
+            self.characterGenderLabel.text = gender
+        }
         present(selectionVC, animated: true, completion: nil)
     }
     }
