@@ -12,7 +12,6 @@ let bethNotificationKey = "BethSmith"
 
 class CharacterDisplayViewController: UIViewController {
     
-    
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterGenderLabel: UILabel!
@@ -43,7 +42,6 @@ class CharacterDisplayViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(CharacterDisplayViewController.updateBackGround(notification:)), name: beth, object: nil)
     }
     
-    
     @objc func updateNameLabel(notification: NSNotification){
         if notification.name == rick {
             let name = "Rick Sanchez"
@@ -68,7 +66,6 @@ class CharacterDisplayViewController: UIViewController {
         }
     }
     
-    
     @IBAction func characterChoiceButtonTapped(_ sender: Any) {
         let selectionVC = storyboard?.instantiateViewController(withIdentifier: "CharacterSelectionViewController") as! CharacterSelectionViewController
         selectionVC.selectionDelegate = self
@@ -77,12 +74,10 @@ class CharacterDisplayViewController: UIViewController {
         }
         present(selectionVC, animated: true, completion: nil)
     }
-    }
-    
+}
 
 extension CharacterDisplayViewController: CharacterSelectionDelegate {
     func didTapChoice(image: UIImage) {
         characterImageView.image = image
     }
-
 }

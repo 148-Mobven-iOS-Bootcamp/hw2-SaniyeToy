@@ -22,6 +22,7 @@ class CharacterSelectionViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
     @IBAction func rickSelectButtonTapped(_ sender: Any) {
         let name = Notification.Name(rawValue: rickNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
