@@ -6,9 +6,7 @@
 //
 
 import UIKit
-let rickNotificationKey = "RickSanchez"
-let mortyNotificationKey = "MortySmith"
-let bethNotificationKey = "BethSmith"
+
 
 class CharacterDisplayViewController: UIViewController {
     
@@ -17,9 +15,9 @@ class CharacterDisplayViewController: UIViewController {
     @IBOutlet weak var characterGenderLabel: UILabel!
     @IBOutlet weak var characterChoiceButton: UIButton!
     
-    let rick = Notification.Name(rawValue: rickNotificationKey)
-    let morty = Notification.Name(rawValue: mortyNotificationKey)
-    let beth = Notification.Name(rawValue: bethNotificationKey)
+    let rick = Notification.Name(rawValue: NotificationKeys.rickNotificationKey.rawValue)
+    let morty = Notification.Name(rawValue: NotificationKeys.mortyNotificationKey.rawValue)
+    let beth = Notification.Name(rawValue: NotificationKeys.bethNotificationKey.rawValue)
     
     deinit{
         NotificationCenter.default.removeObserver(self)

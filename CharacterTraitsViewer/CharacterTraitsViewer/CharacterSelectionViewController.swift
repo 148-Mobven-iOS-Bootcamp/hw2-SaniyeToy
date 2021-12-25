@@ -24,7 +24,7 @@ class CharacterSelectionViewController: UIViewController {
     }
     
     @IBAction func rickSelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue: rickNotificationKey)
+        let name = Notification.Name(rawValue: NotificationKeys.rickNotificationKey.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "rick")!)
         completionHandler!("Male")
@@ -32,7 +32,7 @@ class CharacterSelectionViewController: UIViewController {
     }
     
     @IBAction func mortySelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue: mortyNotificationKey)
+        let name = Notification.Name(rawValue:  NotificationKeys.mortyNotificationKey.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "morty")!)
         completionHandler!("Male")
@@ -40,7 +40,7 @@ class CharacterSelectionViewController: UIViewController {
     }
     
     @IBAction func bethSelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue: bethNotificationKey)
+        let name = Notification.Name(rawValue:  NotificationKeys.bethNotificationKey.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
         selectionDelegate.didTapChoice(image: UIImage(named: "beth")!)
         completionHandler!("Female")
