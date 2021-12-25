@@ -15,9 +15,9 @@ class CharacterDisplayViewController: UIViewController {
     @IBOutlet weak var characterGenderLabel: UILabel!
     @IBOutlet weak var characterChoiceButton: UIButton!
     
-    let rick = Notification.Name(rawValue: NotificationKeys.rickNotificationKey.rawValue)
-    let morty = Notification.Name(rawValue: NotificationKeys.mortyNotificationKey.rawValue)
-    let beth = Notification.Name(rawValue: NotificationKeys.bethNotificationKey.rawValue)
+    let rick = Notification.Name(rawValue: NameKeys.Rick.rawValue)
+    let morty = Notification.Name(rawValue: NameKeys.Morty.rawValue)
+    let beth = Notification.Name(rawValue: NameKeys.Beth.rawValue)
     
     deinit{
         NotificationCenter.default.removeObserver(self)
@@ -42,13 +42,13 @@ class CharacterDisplayViewController: UIViewController {
     
     @objc func updateNameLabel(notification: NSNotification){
         if notification.name == rick {
-            let name = "Rick Sanchez"
+            let name =  NameKeys.Rick.rawValue
             characterNameLabel.text = name
         }else if notification.name == morty {
-            let name = "Morty Smith"
+            let name = NameKeys.Morty.rawValue
             characterNameLabel.text = name
         }else if notification.name == beth {
-            let name = "Beth Smith"
+            let name = NameKeys.Beth.rawValue
             characterNameLabel.text = name
         } else{
         }
@@ -65,17 +65,13 @@ class CharacterDisplayViewController: UIViewController {
     }
     
     @IBAction func characterChoiceButtonTapped(_ sender: Any) {
-        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "CharacterSelectionViewController") as! CharacterSelectionViewController
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.CharacterSelectionViewController.rawValue) as! CharacterSelectionViewController
         selectionVC.selectionDelegate = self
         selectionVC.completionHandler = { gender in
             self.characterGenderLabel.text = gender
         }
+        selectionVC.modalPresentationStyle = .fullScreen
+        
         present(selectionVC, animated: true, completion: nil)
-    }
-}
-
-extension CharacterDisplayViewController: CharacterSelectionDelegate {
-    func didTapChoice(image: UIImage) {
-        characterImageView.image = image
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 class CharacterSelectionViewController: UIViewController {
     
     var selectionDelegate : CharacterSelectionDelegate!
-
+    
     @IBOutlet weak var whichOneLabel: UILabel!
     @IBOutlet weak var rickSelectButton: UIButton!
     @IBOutlet weak var mortySelectButton: UIButton!
@@ -24,26 +24,26 @@ class CharacterSelectionViewController: UIViewController {
     }
     
     @IBAction func rickSelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue: NotificationKeys.rickNotificationKey.rawValue)
+        let name = Notification.Name(rawValue: NameKeys.Rick.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
-        selectionDelegate.didTapChoice(image: UIImage(named: "rick")!)
-        completionHandler!("Male")
+        selectionDelegate.didTapChoice(image: UIImage(named: ImageKeys.rick.rawValue)!)
+        completionHandler!(GenderKeys.male.rawValue)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func mortySelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue:  NotificationKeys.mortyNotificationKey.rawValue)
+        let name = Notification.Name(rawValue: NameKeys.Morty.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
-        selectionDelegate.didTapChoice(image: UIImage(named: "morty")!)
-        completionHandler!("Male")
+        selectionDelegate.didTapChoice(image: UIImage(named: ImageKeys.morty.rawValue)!)
+        completionHandler!(GenderKeys.male.rawValue)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func bethSelectButtonTapped(_ sender: Any) {
-        let name = Notification.Name(rawValue:  NotificationKeys.bethNotificationKey.rawValue)
+        let name = Notification.Name(rawValue:  NameKeys.Beth.rawValue)
         NotificationCenter.default.post(name: name, object: nil)
-        selectionDelegate.didTapChoice(image: UIImage(named: "beth")!)
-        completionHandler!("Female")
+        selectionDelegate.didTapChoice(image: UIImage(named: ImageKeys.beth.rawValue)!)
+        completionHandler!(GenderKeys.female.rawValue)
         dismiss(animated: true, completion: nil)
     }
 }
